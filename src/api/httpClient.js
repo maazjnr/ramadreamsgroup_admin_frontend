@@ -1,9 +1,12 @@
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api/v1";
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api/v1"
+).replace(/\/+$/, "");
 const API_ORIGIN = API_BASE_URL.replace(/\/api\/v1\/?$/, "");
 
 const buildUrl = (path) =>
-  path.startsWith("http") ? path : `${API_BASE_URL}${path}`;
+  path.startsWith("http")
+    ? path
+    : `${API_BASE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 
 const parseResponse = async (response) => {
   const text = await response.text();
