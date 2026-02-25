@@ -15,7 +15,7 @@ React + Vite admin app for managing property content.
 2. Create env file:
    `cp .env.example .env`
 3. Set API base URL in `.env`:
-   `VITE_API_BASE_URL=http://localhost:5000/api/v1`
+   `VITE_API_BASE_URL=https://adminbackend.ramadreamsgroup.com/api/v1`
 4. Start dev server:
    `npm run dev`
 
@@ -23,7 +23,7 @@ Default local URL: `http://localhost:5174`
 
 ## Production Subdomain Example
 - Admin frontend subdomain: `admin.ramadreamsgroup.com`
-- Backend API subdomain: `api-admin.ramadreamsgroup.com`
+- Backend API subdomain: `adminbackend.ramadreamsgroup.com`
 - Set environment:
-  `VITE_API_BASE_URL=https://api-admin.ramadreamsgroup.com/api/v1`
+  `VITE_API_BASE_URL=https://adminbackend.ramadreamsgroup.com/api/v1`
 # ramadreamsgroup_admin_frontend
