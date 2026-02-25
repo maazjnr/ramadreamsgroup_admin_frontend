@@ -1,0 +1,335 @@
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(320px, 58%) minmax(320px, 42%);
+}
+
+.login-visual {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem clamp(1.4rem, 4vw, 4rem);
+  color: #f6f6f4;
+  background:
+    linear-gradient(130deg, rgba(255, 193, 69, 0.22), transparent 48%),
+    linear-gradient(160deg, #41573a 0%, #526e48 58%, #3d3d3d 100%);
+}
+
+.login-orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-orbit-one {
+  width: 620px;
+  height: 620px;
+  bottom: -320px;
+  left: -170px;
+}
+
+.login-orbit-two {
+  width: 500px;
+  height: 500px;
+  bottom: -250px;
+  left: -110px;
+}
+
+.login-orbit-three {
+  width: 380px;
+  height: 380px;
+  bottom: -190px;
+  left: -50px;
+}
+
+.login-copy {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  max-width: 520px;
+  z-index: 1;
+}
+
+.login-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--brand-secondary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.login-brand {
+  font-size: 0.92rem;
+  color: rgba(255, 250, 236, 0.92);
+}
+
+.login-copy h1 {
+  font-size: clamp(2.1rem, 3.7vw, 4rem);
+  line-height: 1.08;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.login-copy p {
+  max-width: 430px;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.04rem;
+}
+
+.login-credit {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+}
+
+.login-pane {
+  display: grid;
+  place-items: center;
+  padding: 1.4rem;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(255, 193, 69, 0.14), transparent 36%),
+    #f2f0e9;
+}
+
+.login-card {
+  width: min(520px, 100%);
+  display: grid;
+  gap: 1rem;
+  border-radius: 22px;
+  border: 1px solid #ddd8ce;
+  background: linear-gradient(180deg, #fffefb, #fff9ef);
+  padding: clamp(1.35rem, 3.4vw, 2.3rem);
+  box-shadow: 0 25px 45px rgba(24, 24, 24, 0.13);
+}
+
+.login-card-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.login-card-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e7dfd0;
+  padding: 0.35rem;
+}
+
+.login-card h2 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-family: "Red Hat Display", sans-serif;
+  color: #222;
+}
+
+.login-card p {
+  color: #63615d;
+}
+
+.login-card .topbar-kicker {
+  color: var(--brand-accent);
+}
+
+.login-meta-row {
+  margin-top: -0.2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6f6b63;
+}
+
+.admin-dashboard-bg {
+  min-height: 100vh;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 193, 69, 0.2), transparent 30%),
+    radial-gradient(circle at 10% 90%, rgba(82, 110, 72, 0.2), transparent 24%),
+    linear-gradient(160deg, #161a17 0%, #101411 45%, #1a211c 100%);
+}
+
+.admin-dashboard-shell {
+  max-width: 1320px;
+  margin: 0 auto;
+  min-height: calc(100vh - 2rem);
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 0.95rem;
+}
+
+.dashboard-sidebar {
+  position: sticky;
+  top: 1rem;
+  height: calc(100vh - 2rem);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background:
+    linear-gradient(150deg, rgba(24, 30, 26, 0.98), rgba(14, 19, 16, 0.98)),
+    linear-gradient(180deg, rgba(255, 193, 69, 0.05), transparent);
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 1rem;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sidebar-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.36rem;
+  object-fit: contain;
+}
+
+.sidebar-header h1 {
+  margin-top: 0.15rem;
+  font-size: 1.25rem;
+  color: #f6f2e8;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.sidebar-intro {
+  border-radius: 14px;
+  padding: 0.78rem;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sidebar-intro p {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f7b733;
+}
+
+.sidebar-intro h2 {
+  margin-top: 0.32rem;
+  font-size: 1.16rem;
+  color: #f7f2e5;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.sidebar-intro span {
+  margin-top: 0.3rem;
+  display: block;
+  color: #c5beae;
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 0.66rem 0.82rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #efede7;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sidebar-link-active {
+  color: #282922;
+  background: var(--brand-secondary);
+  border-color: rgba(255, 193, 69, 0.95);
+}
+
+.sidebar-footer {
+  align-self: end;
+}
+
+.sidebar-footer .button {
+  width: 100%;
+}
+
+.dashboard-workspace {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.95rem;
+}
+
+.admin-dashboard-header {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(140deg, rgba(22, 27, 24, 0.98), rgba(31, 38, 33, 0.95));
+  color: #f8f5ef;
+  padding: 0.95rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.admin-dashboard-header h2 {
+  margin-top: 0.25rem;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.admin-main {
+  min-width: 0;
+}
+
+@media (max-width: 1000px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .login-visual {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-dashboard-bg {
+    padding: 0.75rem;
+  }
+
+  .admin-dashboard-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .admin-dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebar-header {
+    width: 100%;
+  }
+
+  .sidebar-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar-link {
+    text-align: center;
+  }
+}

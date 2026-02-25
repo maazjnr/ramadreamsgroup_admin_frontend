@@ -1,0 +1,184 @@
+.property-editor {
+  display: grid;
+  gap: 1rem;
+}
+
+.editor-header {
+  display: grid;
+  gap: 0.38rem;
+}
+
+.editor-header h2 {
+  font-size: 1.48rem;
+  font-family: "Red Hat Display", sans-serif;
+  color: #fff8ea;
+}
+
+.editor-header p {
+  color: #c2bbad;
+}
+
+.editor-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.editor-pills span {
+  border-radius: 999px;
+  padding: 0.3rem 0.62rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ded8cb;
+  font-size: 0.78rem;
+}
+
+.editor-top-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.editor-section {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 0.96rem;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  display: grid;
+  gap: 0.86rem;
+}
+
+.editor-section h3 {
+  font-size: 1.02rem;
+  color: #f2ecde;
+}
+
+.admin-dashboard-bg .form-field span {
+  color: #cec6b6;
+}
+
+.admin-dashboard-bg .form-field input,
+.admin-dashboard-bg .form-field select,
+.admin-dashboard-bg .form-field textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f3eee2;
+}
+
+.admin-dashboard-bg .form-field input::placeholder,
+.admin-dashboard-bg .form-field textarea::placeholder {
+  color: #b7b09e;
+}
+
+.admin-dashboard-bg .form-field input:focus,
+.admin-dashboard-bg .form-field select:focus,
+.admin-dashboard-bg .form-field textarea:focus {
+  border-color: rgba(255, 193, 69, 0.76);
+  box-shadow: 0 0 0 3px rgba(255, 193, 69, 0.2);
+}
+
+.admin-dashboard-bg .form-field select {
+  appearance: none;
+  padding-right: 2rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255, 193, 69, 0.95) 50%),
+    linear-gradient(135deg, rgba(255, 193, 69, 0.95) 50%, transparent 50%);
+  background-position:
+    calc(100% - 16px) calc(50% - 3px),
+    calc(100% - 10px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  color-scheme: dark;
+}
+
+.admin-dashboard-bg .form-field select option,
+.filter-row select option {
+  background: #1a221d;
+  color: #f7f2e3;
+}
+
+.form-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.74rem;
+}
+
+.form-grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.74rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 0.72rem;
+}
+
+.media-card {
+  display: grid;
+  gap: 0.46rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.42rem;
+}
+
+.media-card img,
+.media-card video {
+  width: 100%;
+  height: 130px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.media-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  font-size: 0.82rem;
+  color: #d9d3c5;
+}
+
+.media-label {
+  font-size: 0.77rem;
+  color: #d2cbbb;
+  word-break: break-word;
+}
+
+.sticky-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(180deg, rgba(15, 20, 17, 0.65), rgba(15, 20, 17, 0.96));
+  padding-top: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+
+@media (max-width: 1080px) {
+  .editor-top-grid,
+  .form-grid-three {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 740px) {
+  .form-grid-two,
+  .form-grid-three {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .button {
+    width: 100%;
+  }
+}
